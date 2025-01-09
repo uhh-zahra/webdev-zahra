@@ -1,0 +1,109 @@
+/* Importing Goole*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+    margin: 0;
+    padding: 0%;
+}
+body{
+    font-family: 'Poppins';
+    background-color: #000000;
+}
+
+/* General Reset */
+.nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000; /* Example background color */
+}
+
+.nav__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    margin: 0 10px;
+}
+
+.nav__group {
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.nav__link {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.nav__link:hover {
+    color: lightgray; /* Example hover effect */
+}
+
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Optional: light background */
+}
+
+/* Center the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+/* Style the form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #111; /* Background for the box */
+    border: 1px solid #111; /* Optional: border for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Set a fixed width */
+    text-align: center;
+}
+
+/* Style the inputs and button */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button#signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3c3c3c; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#signup-btn:hover {
+    background-color: #999999; /* Darker green on hover */
+}
+
+#signup-error {
+    margin-top: 10px;
+    text-align: center;
+}

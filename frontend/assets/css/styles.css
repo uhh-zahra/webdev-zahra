@@ -1,0 +1,974 @@
+/* Importing Goole*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+/* VARIABLES*/
+:root {
+  --header-height: 3rem;
+
+  /* COLOURS */
+/* Define a very dark black color using HSL (hue, saturation, lightness) */
+--black-colour: hsl(var(--hue-colour), 4%, 4%);
+
+/* Define a slightly lighter black color for alternative uses */
+--black-colour-alt: hsl(var(--hue-colour), 4%, 8%);
+
+/* Set the main background color for the body of the page */
+--body-colour: hsl(var(--hue-colour), 4%, 6%);
+
+/* Define a background color for containers, slightly lighter than the body */
+--container-colour: hsl(var(--hue-colour), 4%, 10%);
+
+/* Set the base hue color for the entire theme, used throughout other colors */
+--hue-colour: 206; /* Blue hue */
+
+/* Define the color for the scrollbar thumb (draggable part) with a medium-dark shade */
+--scroll-thumb-colour-alt: hsl(var(--hue-colour), 4%, 20%);
+
+/* Define a darker color for the scroll thumb to provide contrast */
+--scroll-thumb-colour: hsl(var(--hue-colour), 4%, 16%);
+
+/* Set the color for titles or headings to be very light for visibility */
+--title-colour: hsl(var(--hue-colour), 4%, 95%);
+
+/* Set a medium-light color for the main text of the page */
+--text-colour: hsl(var(--hue-colour), 4%, 75%);
+
+/* Define a lighter shade for secondary or less prominent text */
+--text-colour-light: hsl(var(--hue-colour), 4%, 65%);
+
+/* Create a gradient from a medium-dark color to a very dark shade for text effects */
+--text-gradient: linear-gradient(hsl(var(--hue-colour), 4%, 24%), hsl(var(--hue-colour), 4%, 8%));
+
+/* Define a pure white color */
+--white-colour: #FFF;
+
+
+/* FONT AND TYPOGRAPHY*/
+/* Define the primary font for the body text, using 'Poppins' and sans-serif as fallback */
+--body-font: 'Poppins', sans-serif;
+
+/* Set the largest font size for titles or prominent text (5 times the base font size) */
+--biggest-font-size: 5rem;
+
+/* Set a slightly smaller font size for major headings (3.5 times the base font size) */
+--bigger-font-size: 3.5rem;
+
+/* Set a large font size for significant content, such as main headings (2.5 times the base font size) */
+--big-font-size: 2.5rem;
+
+/* Set the font size for <h2> headings (relative to base font size) */
+--h2-font-size: 1.25rem;
+
+/* Set the font size for <h3> headings (slightly smaller than <h2>) */
+--h3-font-size: 1.125rem;
+
+/* Set the default or normal font size for body text (slightly smaller than base) */
+--normal-font-size: .938rem;
+
+/* Set a small font size for secondary text or fine details */
+--small-font-size: .813rem;
+
+/* Set an even smaller font size for extra small text */
+--smaller-font-size: .75rem;
+
+/* Define the line height for text to improve readability, especially for larger body text */
+--text-line-height: 2rem;
+
+
+/* Font weight */
+/* Define a medium font weight, typically used for slightly emphasized text */
+--font-medium: 500;
+
+/* Define a semi-bold font weight, often used for headings or important text */
+--font-semi-bold: 600;
+
+
+  /* Bottom=*/
+/* Define a margin-bottom value of 0.5rem for small spacing */
+--mb-0-5: .5rem;
+
+/* Define a margin-bottom value of 0.75rem for slightly larger spacing */
+--mb-0-75: .75rem;
+
+/* Define a margin-bottom value of 1rem for standard spacing */
+--mb-1: 1rem;
+
+/* Define a margin-bottom value of 1.5rem for medium spacing */
+--mb-1-5: 1.5rem;
+
+/* Define a margin-bottom value of 2rem for larger spacing */
+--mb-2: 2rem;
+
+/* Define a margin-bottom value of 2.5rem for extra large spacing */
+--mb-2-5: 2.5rem;
+
+
+  /* z index */
+/* Define a z-index value for tooltips, ensuring they appear above most elements */
+--z-tooltip: 10;
+
+/* Define a higher z-index value for fixed elements, keeping them on top of other content */
+--z-fixed: 100;
+
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+/* Set the largest font size (7.5 times the base size) for very prominent titles or banners */
+--biggest-font-size: 7.5rem;
+
+/* Set a slightly smaller font size (4.5 times the base size) for main headings */
+--bigger-font-size: 4.5rem;
+
+/* Set a large font size (4 times the base size) for significant content or subheadings */
+--big-font-size: 4rem;
+
+/* Define the font size for <h2> headings, larger than body text but smaller than main titles */
+--h2-font-size: 1.5rem;
+
+/* Define the font size for <h3> headings, slightly smaller than <h2> */
+--h3-font-size: 1.25rem;
+
+/* Set the default or base font size for body text */
+--normal-font-size: 1rem;
+
+/* Define a smaller font size (0.875rem) for secondary text or less prominent details */
+--small-font-size: .875rem;
+
+/* Define an even smaller font size (0.813rem) for fine print or extra small text */
+--smaller-font-size: .813rem;
+  }
+}
+
+/*BASE*/
+* {
+/* Set the box-sizing property to include padding and border within the element's total width and height */
+box-sizing: border-box;
+
+/* Remove any default padding applied by the browser to ensure consistent spacing */
+padding: 0;
+
+/* Remove any default margin applied by the browser to avoid unwanted spacing around elements */
+margin: 0;
+
+}
+
+/* Enable smooth scrolling for the entire HTML document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define styles for the body of the document */
+body {
+  /* Add top margin equal to the header height to offset content below the header */
+  margin: var(--header-height) 0 0 0;
+
+  /* Set the font family to the predefined body font */
+  font-family: var(--body-font);
+
+  /* Set the font size to the normal font size defined in variables */
+  font-size: var(--normal-font-size);
+
+  /* Set the background color of the page to black */
+  background-color: #000000;
+
+  /* Set the text color to the predefined text color variable */
+  color: var(--text-colour);
+}
+
+
+/* Set the color for all heading elements (h1, h2, h3) to the predefined title color */
+h1, h2, h3 {
+  color: var(--title-colour);
+}
+
+/* Remove default list styling (bullets or numbers) for unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Remove the default underline style for all anchor (<a>) tags */
+a {
+  text-decoration: none;
+}
+
+
+/* Remove default border and outline styles from buttons and input fields for a cleaner look */
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+/* Change the cursor to a pointer when hovering over buttons to indicate interactivity */
+button {
+  cursor: pointer;
+}
+
+/* Ensure images are responsive by setting the maximum width to 100% and maintaining aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* CSS CLASSES */
+
+/* Define a base class for sections with consistent vertical padding */
+.section {
+  padding: 4rem 0 2rem; /* Top padding: 4rem, Bottom padding: 2rem, No horizontal padding */
+}
+
+/* Style the section titles with a larger font size, centered alignment, and spacing below */
+.section__title {
+  font-size: var(--bigger-font-size); /* Use the larger font size defined in variables */
+  text-align: center; /* Center-align the title text */
+  margin-bottom: var(--mb-2-5); /* Add spacing below the title for separation */
+}
+
+/* Add a gradient effect to section titles using background clipping */
+.section__title-gradient {
+  background: var(--text-gradient); /* Apply the gradient defined in variables */
+  color: transparent; /* Make the text itself transparent to reveal the gradient */
+  -webkit-background-clip: text; /* Clip the background to the text (Webkit browsers) */
+  background-clip: text; /* Clip the background to the text (standard) */
+}
+
+
+/* LAYOUT */
+
+/* Ensure the main container hides any overflowing content */
+.main {
+  overflow: hidden;
+}
+
+/* Set a maximum width for the container to maintain a clean layout and center it horizontally */
+.container {
+  max-width: 968px; /* Define the maximum width for the container */
+  margin-left: var(--mb-1-5); /* Add left margin for spacing */
+  margin-right: var(--mb-1-5); /* Add right margin for spacing */
+}
+
+/* Define a reusable grid layout */
+.grid {
+  display: grid; /* Set the layout to grid for flexible alignment and spacing */
+}
+
+/* HEADER */
+
+/* Style the header to be fixed at the top, spanning the full width of the viewport */
+.header {
+  width: 100%; /* Ensure the header spans the full width */
+  position: fixed; /* Fix the header at the top of the page */
+  top: 0; /* Position it at the very top */
+  left: 0; /* Align it to the left edge */
+  z-index: var(--z-fixed); /* Use a high z-index to ensure it stays above other content */
+  background: transparent; /* Make the header background transparent */
+}
+
+
+/* NAVIGATION STYLES */
+
+/* Style for the navigation container */
+.nav {
+  height: var(--header-height); /* Set the height to the header height variable */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly between the logo and toggle */
+  align-items: center; /* Vertically center the items */
+}
+
+/* Style for the navigation logo */
+.nav__logo {
+  display: flex; /* Use flexbox to align logo content */
+  width: 1.5rem; /* Set a fixed width for the logo */
+}
+
+/* Style for the menu toggle button */
+.nav__toggle {
+  font-size: 1.2rem; /* Set font size for the toggle button */
+  color: var(--white-colour); /* Set the toggle button color to white */
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 767px) {
+  /* Styles for the navigation menu on smaller screens */
+  .nav__menu {
+    position: fixed; /* Fix the menu position */
+    background-color: var(--body-colour); /* Set the background color */
+    top: -100%; /* Initially hide the menu above the screen */
+    left: 0; /* Align to the left of the screen */
+    width: 100%; /* Full width */
+    padding: 4rem 0 3rem; /* Add padding inside the menu */
+    transition: .4s; /* Smooth transition for menu opening */
+  }
+}
+
+/* Style for the navigation list */
+.nav__list {
+  display: flex; /* Use flexbox for list layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align the list items */
+  row-gap: 1rem; /* Add space between the list items */
+}
+
+/* Style for each navigation link */
+.nav__link {
+  color: var(--white-colour); /* Set text color to white */
+  font-size: var(--h2-font-size); /* Set font size for the link */
+  text-transform: uppercase; /* Transform text to uppercase */
+  font-weight: var(--font-semi-bold); /* Apply semi-bold font weight */
+  background: var(--text-gradient); /* Apply gradient background to text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  -webkit-background-clip: text; /* Clip the background to text (Webkit support) */
+  background-clip: text; /* Clip the background to text (standard) */
+  transition: .4s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav__link:hover {
+  background: var(--white-colour); /* Change background to white on hover */
+  color: transparent; /* Keep the text transparent */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text; /* Clip background to text */
+}
+
+/* Close button style for mobile menu */
+.nav__close {
+  position: absolute; /* Position the close button absolutely */
+  font-size: 1.5rem; /* Set font size for the close button */
+  top: 1rem; /* Position the button at the top */
+  right: 1rem; /* Position the button at the right */
+  color: var(--white-colour); /* Set the close button color to white */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Show menu when toggled (used for mobile menu) */
+.show-menu {
+  top: 0; /* Move the menu into view */
+}
+
+/* Change header background when scrolling */
+.scroll-header {
+  background-color: var(--body-colour); /* Change the background color to body color */
+}
+
+/* Style for active navigation link */
+.active-link {
+  background: var(--white-colour); /* Set active link background to white */
+  color: transparent; /* Make the text transparent */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text; /* Clip background to text */
+}
+
+
+/* HOME */
+
+/* Style for the home image */
+.home__img {
+  width: 250px; /* Set a fixed width for the image */
+  position: absolute; /* Position the image absolutely relative to its container */
+  top: -16rem; /* Move the image upwards to create spacing */
+  right: 1.5rem; /* Position the image towards the right */
+}
+
+/* Add top padding to the home data container */
+.home__data {
+  padding-top: 5rem; /* Add padding on top to space out content */
+}
+
+/* Make the home header position relative to allow for absolutely positioned child elements */
+.home__header {
+  position: relative;
+}
+
+/* Style the home title, using absolute positioning for precise placement */
+.home__title {
+  position: absolute; /* Position the title absolutely within its container */
+  top: -4rem; /* Move the title upwards */
+  left: 1rem; /* Align the title slightly from the left edge */
+  line-height: 6rem; /* Set the line height for spacing */
+  font-size: var(--biggest-font-size); /* Use the biggest font size for prominence */
+  background: var(--text-gradient); /* Apply a gradient background */
+  color: transparent; /* Make the text transparent to reveal the gradient */
+  -webkit-background-clip: text; /* Clip the gradient to the text in Webkit browsers */
+  background-clip: text; /* Clip the gradient to the text in standard browsers */
+}
+
+/* Style the subtitle under the home title */
+.home__subtitle {
+  font-size: var(--big-font-size); /* Set the font size */
+  margin-bottom: var(--mb-2-5); /* Add margin at the bottom for spacing */
+}
+
+/* Style the description under the title */
+.home__title-description {
+  font-size: var(--h3-font-size); /* Set the font size for the description */
+  font-weight: var(--font-medium); /* Use medium font weight for the description */
+  margin-bottom: var(--mb-1); /* Add margin at the bottom for spacing */
+}
+
+/* Style the main description */
+.home__description {
+  margin-bottom: var(--mb-2-5); /* Add bottom margin for spacing */
+  line-height: var(--text-line-height); /* Set line height for improved readability */
+}
+
+/* Style the price section */
+.home__price {
+  font-size: var(--h3-font-size); /* Use the same font size as the description */
+  font-weight: var(--font-semi-bold); /* Use semi-bold font weight for emphasis */
+  margin-left: var(--mb-0-75); /* Add a small left margin for spacing */
+}
+
+/* BUTTONS */
+
+/* Base style for buttons */
+.button {
+  display: inline-block; /* Make the button an inline-block element for flexibility */
+  background-color: var(--black-colour); /* Set the background color to black */
+  color: var(--white-colour); /* Set the text color to white */
+  padding: 1rem 1.25rem; /* Add padding inside the button for better size and spacing */
+  border-radius: .5rem; /* Round the corners of the button */
+  transition: .3s; /* Smooth transition for background color on hover */
+}
+
+/* Hover effect for buttons - change background color on hover */
+.button:hover {
+  background-color: var(--black-colour-alt); /* Change background to a lighter black */
+}
+
+/* Style for icons inside the button */
+.button__icon {
+  font-size: 1.2rem; /* Set the font size for the icon inside the button */
+}
+
+/* Style for buttons with flex layout */
+.button--flex {
+  display: inline-flex; /* Use inline-flex to align items horizontally */
+  align-items: center; /* Vertically align items in the center */
+  column-gap: .75rem; /* Add space between the icon and text */
+}
+
+
+/* SPONSOR */
+
+/* Style for sponsor images */
+.sponsor__img {
+  width: 90px; /* Set the width of the sponsor logo/image */
+}
+
+/* Style for sponsor container, using grid layout for flexible placement */
+.sponsor__container {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* Automatically adjust columns based on available space */
+  row-gap: 5rem; /* Add vertical spacing between rows */
+  justify-items: center; /* Center items horizontally within the grid */
+  align-items: center; /* Vertically center items in each grid cell */
+}
+
+/* SPECS */
+
+/* Container for specifications, positioned relative for absolutely positioned children */
+.specs__container {
+  position: relative;
+}
+
+/* Add spacing between content items in the specs section */
+.specs__content {
+  row-gap: 1.5rem; /* Add vertical spacing between the specification items */
+}
+
+/* Grid layout for specs data, with small vertical spacing */
+.specs__data {
+  display: grid; /* Use grid layout for the data items */
+  row-gap: .25rem; /* Small vertical gap between rows of data */
+}
+
+/* Style for icons in the specs section */
+.specs__icon {
+  font-size: 1.2rem; /* Set the font size for the icons */
+  color: var(--white-colour); /* Set icon color to white */
+}
+
+/* Title style for specs */
+.specs__title {
+  font-size: var(--normal-font-size); /* Set the font size for the title */
+  font-weight: var(--font-medium); /* Apply medium font weight for emphasis */
+}
+
+/* Subtitle style for specs */
+.specs__subtitle {
+  font-size: var(--smaller-font-size); /* Set the font size for the subtitle */
+}
+
+/* Add left margin to the first and fourth data items for visual spacing */
+.specs__data:nth-child(1), .specs__data:nth-child(4) {
+  margin-left: 1.5rem; /* Add margin to the left of these specific items */
+}
+
+/* Style for the image in the specs section */
+.specs__img {
+  width: 250px; /* Set width for the image */
+  position: absolute; /* Position the image absolutely within the container */
+  top: 2rem; /* Move the image 2rem from the top */
+  right: -4rem; /* Position the image slightly off to the right */
+}
+
+
+/* Midnight */
+
+/* Container for the Midnight section, using grid layout with two equal-width columns */
+.Midnight__container {
+  position: relative; /* Set position relative to allow absolute positioning of child elements */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns for the content */
+}
+
+/* Style for the data section within the Midnight container, adding padding for spacing */
+.Midnight__data {
+  padding: 5rem 0 3rem; /* Add padding to the top, bottom, and between sections */
+}
+
+/* Style for the image in the Midnight section, positioned absolutely */
+.Midnight__img {
+  width: 250px; /* Set a fixed width for the image */
+  position: absolute; /* Position the image absolutely within the container */
+  left: -7rem; /* Move the image left to overlap other content */
+}
+
+/* Style for the description in the Midnight section, adding margin and line height for readability */
+.Midnight__description {
+  margin-bottom: var(--mb-1-5); /* Add bottom margin for spacing */
+  line-height: var(--text-line-height); /* Set the line height to improve readability */
+}
+
+
+/* DISCOUNT */
+
+/* Container for the discount section, with background color and padding */
+.discount__container {
+  position: relative; /* Position relative for absolute positioning of child elements */
+  background-color: var(--container-colour); /* Set the background color to the container color */
+  padding: 2rem 1.5rem; /* Add padding inside the container for spacing */
+  border-radius: .75rem; /* Round the corners of the container for a smooth effect */
+}
+
+/* Style for the discount title, with specific font size and margin for spacing */
+.discount__title {
+  font-size: var(--h3-font-size); /* Use a smaller font size for the title */
+  margin-bottom: var(--mb-0-75); /* Add margin at the bottom for spacing */
+}
+
+/* Style for the description in the discount section */
+.discount__description {
+  margin-bottom: var(--mb-1); /* Add bottom margin for spacing */
+}
+
+/* Style for the image in the discount section, positioned absolutely */
+.discount__img {
+  width: 300px; /* Set the width of the image */
+  position: absolute; /* Position the image absolutely within the container */
+  top: 4rem; /* Move the image 4rem from the top */
+  right: -11rem; /* Position the image far to the right, overlapping other content */
+}
+ 
+
+/* PRODUCTS */
+
+/* Style for the line containing product text, setting line height for vertical spacing */
+.products__line {
+  line-height: 4rem; /* Increase line height for better text spacing */
+}
+
+/* Container for product items, using grid layout with defined columns and gaps */
+.products__container {
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns for product cards */
+  gap: 5rem 1.5rem; /* Define the gap between columns and rows */
+  padding-top: 3rem; /* Add padding at the top for spacing */
+}
+
+/* Style for individual product cards, with relative positioning and background */
+.products__card {
+  position: relative; /* Allow absolute positioning of child elements */
+  height: 132px; /* Set a fixed height for the product card */
+  background-color: var(--container-colour); /* Set background color to the container color */
+  padding: .75rem; /* Add padding inside the card for spacing */
+  border-radius: .5rem; /* Round the corners of the card */
+  display: grid; /* Use grid layout for the content inside the card */
+}
+
+/* Style for product images, positioned absolutely within the product card */
+.products__img {
+  width: 80px; /* Set width of the image */
+  position: absolute; /* Position the image absolutely inside the card */
+  inset: 0; /* Set all four edges to zero to align the image */
+  margin-right: auto; /* Center the image horizontally */
+  margin-left: auto; /* Center the image horizontally */
+  top: -3rem; /* Move the image up to overlap other content */
+}
+
+/* Align the content of the product card towards the bottom */
+.products__content {
+  align-self: flex-end; /* Align content to the bottom of the card */
+}
+
+/* Style for the product title and price, with smaller font size */
+.products__title, .products__price {
+  font-size: var(--small-font-size); /* Use small font size for the title and price */
+}
+
+/* Style for the product price, applying a semi-bold font weight */
+.products__price {
+  font-weight: var(--font-semi-bold); /* Make the price text semi-bold */
+}
+
+/* Style for the button inside the product card, positioned at the bottom-right */
+.products__button {
+  position: absolute; /* Position the button absolutely inside the card */
+  right: .5rem; /* Place the button 0.5rem from the right edge */
+  bottom: .5rem; /* Place the button 0.5rem from the bottom edge */
+  padding: .5rem; /* Add padding around the button */
+  border-radius: .35rem; /* Round the corners of the button */
+}
+
+/* FOOTER */
+
+/* Container for the footer, using grid layout with columns that adjust based on screen size */
+.footer__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Create responsive columns that adjust to screen size */
+  row-gap: 2rem; /* Add gap between rows in the grid */
+}
+
+/* Style for the footer logo, setting its width */
+.footer__logo {
+  width: 2rem; /* Set a fixed width for the footer logo */
+}
+
+/* Style for the footer title, setting font size, weight, and margin */
+.footer__title {
+  font-size: var(--h3-font-size); /* Set the font size for the title */
+  font-weight: var(--font-medium); /* Use medium font weight for the title */
+  margin-bottom: var(--mb-1); /* Add margin below the title for spacing */
+}
+
+/* Links section in the footer, arranged vertically */
+.footer__links {
+  display: flex; /* Use flexbox to align the links */
+  flex-direction: column; /* Arrange the links vertically */
+  row-gap: .5rem; /* Add gap between each link */
+}
+
+/* Style for each footer link, setting color */
+.footer__link {
+  color: var(--text-colour); /* Set the color for the footer links */
+}
+
+/* Hover effect for footer links, changing the color to white */
+.footer__link:hover {
+  color: var(--white-colour); /* Change color to white on hover */
+}
+
+/* Form in the footer, styled to be a flex container with some spacing */
+.footer__form {
+  display: flex; /* Use flexbox for aligning form elements */
+  column-gap: .5rem; /* Add space between form elements */
+  background-color: var(--container-colour); /* Set background color to container color */
+  padding: .5rem .75rem; /* Add padding inside the form */
+  border-radius: .5rem; /* Round the corners of the form */
+  margin-bottom: var(--mb-2); /* Add bottom margin for spacing */
+}
+
+/* Style for the input field in the footer form */
+.footer__input {
+  background-color: var(--container-colour); /* Set the background color to container color */
+  width: 90%; /* Make the input field take up 90% of the available width */
+  color: var(--white-colour); /* Set the text color to white */
+}
+
+/* Placeholder text style inside the input field */
+.footer__input::placeholder {
+  color: var(--text-colour); /* Set the placeholder color */
+  font-size: var(--normal-font-size); /* Set the font size for the placeholder */
+  font-family: var(--body-font); /* Use the body font for the placeholder */
+}
+
+/* Social media links section in the footer, using flexbox */
+.footer__social {
+  display: flex; /* Use flexbox for social media links */
+  column-gap: 1.25rem; /* Add space between the social links */
+}
+
+/* Style for each social media link, setting its appearance */
+.footer__social-link {
+  display: inline-flex; /* Use inline-flex for the social links */
+  color: var(--white-colour); /* Set text color to white */
+  background-color: var(--container-colour); /* Set background color */
+  padding: .5rem; /* Add padding inside the social link */
+  border-radius: .25rem; /* Round the corners of the social links */
+  font-size: 1rem; /* Set font size for the social link */
+}
+
+/* Hover effect for social media links, changing background color */
+.footer__social-link:hover {
+  background-color: var(--black-colour); /* Change background color on hover */
+}
+
+/* Style for the copyright section in the footer */
+.footer__copy {
+  margin-top: 5rem; /* Add margin at the top for spacing */
+  text-align: center; /* Center align the copyright text */
+}
+
+/* Style for the copyright link, with smaller font size and light text color */
+.footer__copy-link {
+  font-size: var(--smaller-font-size); /* Set smaller font size for the copyright link */
+  color: var(--text-colour-light); /* Set the text color to a lighter shade */
+}
+
+
+/* SCROLL UP */
+
+/* Style for the scroll up button, positioned fixed at the bottom-right */
+.scrollup {
+  position: fixed; /* Fixed position to keep the button in place on scroll */
+  right: 1rem; /* Position the button 1rem from the right side of the screen */
+  bottom: -20%; /* Initially hide the button by placing it off-screen */
+  display: flex; /* Use flexbox to align the button contents */
+  background-color: var(--container-colour); /* Set background color for the button */
+  border-radius: .25rem; /* Round the corners of the button */
+  padding: .45rem; /* Add padding inside the button for spacing */
+  opacity: 9; /* Set initial opacity to create a fade effect */
+  z-index: var(--z-tooltip); /* Set z-index to make sure it appears above other elements */
+  transition: .4s; /* Apply a smooth transition for opacity and background color changes */
+}
+
+/* Hover effect for the scroll up button */
+.scrollup:hover {
+  background-color: var(--black-colour); /* Change background color on hover */
+  opacity: 1; /* Set full opacity on hover */
+}
+
+/* Icon style inside the scroll up button */
+.scrollup__icon {
+  color: var(--white-colour); /* Set the icon color to white */
+  font-size: 1.35rem; /* Set font size for the icon */
+}
+
+/* Show the scroll up button when it's in view */
+.show-scroll {
+  bottom: 5rem; /* Position the button 5rem from the bottom of the screen */
+}
+
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: .60rem;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-colour);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-thumb-colour-alt);
+}
+
+/*= MEDIA QUERIES*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .section__title {
+    font-size: var(--big-font-size);
+  }
+  .home__img {
+    width: 200px;
+    top: -13rem;
+  }
+  .home__title {
+    top: -4rem;
+    font-size: var(--bigger-font-size);
+  }
+  .home__data {
+    padding-top: 1rem;
+  }
+  .home__description {
+    font-size: var(--small-font-size);
+  }
+  .specs__img {
+    width: 200px;
+  }
+  .Midnight__container {
+    grid-template-columns: .6fr 1fr;
+  }
+  .Midnight__img {
+    width: 220px;
+    top: -2rem;
+    left: -9rem;
+  }
+  .Midnight__data {
+    padding: 0;
+  }
+  .products__container {
+    grid-template-columns: 142px;
+    justify-content: center;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .home__container {
+    grid-template-columns: .8fr 1fr;
+  }
+  .home__data {
+    padding-top: 2rem;
+  }
+  .home__img {
+    top: -7rem;
+    left: 0;
+  }
+  .specs__img {
+    position: initial;
+  }
+  .specs__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .Midnight__img {
+    position: initial;
+  }
+  .Midnight__data {
+    padding: 0;
+  }
+  .Midnight__container {
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .discount__img {
+    position: initial;
+  }
+  .discount__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .products__container {
+    grid-template-columns: repeat(3, 142px);
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__logo {
+    width: 2rem;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+  .nav__link {
+    font-size: var(--normal-font-size);
+    text-transform: initial;
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+  .home__container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home__img {
+    top: -9rem;
+    left: 4rem;
+  }
+  .home__data {
+    padding-top: 8rem;
+  }
+  .specs__img {
+    width: 300px;
+  }
+  .Midnight__container {
+    column-gap: 5rem;
+  }
+  .Midnight__img {
+    width: 300px;
+  }
+  .Midnight__description {
+    margin-bottom: var(--mb-2);
+  }
+  .discount__container {
+    grid-template-columns: 250px max-content;
+    justify-content: center;
+    column-gap: 5rem;
+    padding: 3rem 0;
+  }
+  .discount__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1);
+  }
+  .discount__description {
+    margin-bottom: var(--mb-2);
+  }
+  .products__container {
+    grid-template-columns: repeat(3, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+  }
+  .products__card {
+    height: 152px;
+    padding: .85rem;
+  }
+  .products__img {
+    width: 95px;
+  }
+  .footer__container {
+    grid-template-columns: .4fr .7fr .7fr 1fr;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__img {
+    width: 300px;
+    top: -15rem;
+  }
+  .home__title {
+    top: -5rem;
+    left: 3.5rem;
+  }
+  .home__description {
+    padding-right: 5rem;
+  }
+  .sponsor__img {
+    width: 100px;
+  }
+  .discount__img {
+    width: 350px;
+  }
+  .footer__container {
+    padding-top: 3rem;
+  }
+  .footer__copy {
+    margin-top: 9rem;
+  }
+}
